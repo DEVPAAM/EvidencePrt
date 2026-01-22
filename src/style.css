@@ -1,0 +1,98 @@
+/* CONFIGURACION DE ESTILO - EVIDENCEWEB
+   Paleta: Verdes UTC Institucionales y Crema */
+
+:root {
+    --verde-principal: #1B4332;     /* Verde bosque */
+    --verde-vibrante: #2D6A4F;      /* Verde para botones y acentos */
+    --verde-claro: #B7E4C7;         /* Para bordes y detalles suaves */
+    --fondo-crema: #F8F9FA;
+    --fuente-principal: 'Montserrat', sans-serif;
+}
+
+body {
+    font-family: var(--fuente-principal);
+    background-color: var(--fondo-crema);
+    color: #333;
+}
+
+/* NAVBAR */
+.navbar {
+    background: #fff;
+    border-bottom: 3px solid var(--verde-claro);
+}
+
+.nav-link {
+    color: var(--verde-principal) !important;
+    font-weight: 600;
+}
+
+/* HERO SECTION */
+.hero-section {
+    background: linear-gradient(
+        135deg,
+        var(--verde-principal) 0%,
+        var(--verde-vibrante) 100%
+    );
+}
+
+.main-logo {
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+    animation: bounceIn 1.2s ease; /* Animacion de entrada del logo */
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    70% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* TARJETAS DE UNIDADES */
+.unit-card {
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.unit-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1) !important;
+}
+
+.unit-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--verde-claro);
+}
+
+.disabled-card {
+    background-color: #f1f1f1;
+}
+
+/* FOOTER */
+.footer {
+    background-color: var(--verde-principal);
+}
+
+.footer-logo {
+    max-width: 130px;
+    filter: brightness(0) invert(1); /* Convierte el logo UTC a blanco */
+}
+
+/* CONTENEDOR DE CODIGO */
+pre {
+    background: #1e1e1e;
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 5px solid var(--verde-vibrante);
+    color: #dcdcdc;
+}
